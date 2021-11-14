@@ -8,6 +8,7 @@ import Nameplate from "../components/NamePlate";
 import WildPokemon from "../components/WildPokemon";
 import BattleGround from "../components/BattleGround";
 import BattleMenu from "./BattleMenu";
+import { Link } from "react-router-dom";
 interface Props {
 
 }
@@ -72,8 +73,12 @@ const Zafari:React.FC<Props> = (props) => {
                         <button onClick={onRunHandler}>Correr</button>
                     </>
                 ):
+                    <>
                     <button onClick={onRunHandler}>Buscar</button>
+                    </>
+
                 }
+                <Link to="/pokedex"><button>Pokedex</button></Link>
             </BattleMenu>
         </>
     )
