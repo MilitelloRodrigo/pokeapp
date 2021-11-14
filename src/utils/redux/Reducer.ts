@@ -1,6 +1,5 @@
 import initialState from "./InitialState";
 import {Pokemon} from "../interfaces/pokemon";
-import {stat} from "fs";
 
 export enum ReducerTypes {
     SEE= "SEE",
@@ -26,14 +25,17 @@ const Reducer= (state = initialState ,action:action) => {
                 viewedPokemon.push(pokemon)
             }
             newState.viewedPokemon = viewedPokemon;
-            console.log(action.payload)
             return newState
         case "CATCH":
             console.log(state)
             console.log('capturando ' + pokemon.name)
+            console.log (pokemon)
+            console.log(pokemon.catched)
             pokemon.catched=true
-            if (!viewedPokemon.find((poke)=>{return poke.id === pokemon.id})){
-                viewedPokemon.push(pokemon)
+            console.log(pokemon.catched)
+            let poke = viewedPokemon.find((poke , id)=>{return (poke.id===pokemon.id && poke.catched===false)})
+            if (poke){
+                poke.catched=true
             }
             newState.viewedPokemon = viewedPokemon;
             return {...state}

@@ -9,7 +9,7 @@ function App() {
       <div>
           <Router basename="/pokeapp">
               <Switch>
-                  <Route path="/zafari">
+                  <Route path="/">
                       <Zafari/>
                   </Route>
                   <Route path="/pokedex">
