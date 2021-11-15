@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/pokeapp/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/pokeapp/static/js/main.d0bb9d3a.chunk.js",
-    "main.js.map": "/pokeapp/static/js/main.d0bb9d3a.chunk.js.map",
-    "runtime-main.js": "/pokeapp/static/js/runtime-main.2fb98883.js",
-    "runtime-main.js.map": "/pokeapp/static/js/runtime-main.2fb98883.js.map",
-    "static/js/2.cefc4de5.chunk.js": "/pokeapp/static/js/2.cefc4de5.chunk.js",
-    "static/js/2.cefc4de5.chunk.js.map": "/pokeapp/static/js/2.cefc4de5.chunk.js.map",
-    "static/js/3.a843e742.chunk.js": "/pokeapp/static/js/3.a843e742.chunk.js",
-    "static/js/3.a843e742.chunk.js.map": "/pokeapp/static/js/3.a843e742.chunk.js.map",
+    "main.js": "/pokeapp/static/js/main.5d1dfadd.chunk.js",
+    "main.js.map": "/pokeapp/static/js/main.5d1dfadd.chunk.js.map",
+    "runtime-main.js": "/pokeapp/static/js/runtime-main.f09c9af4.js",
+    "runtime-main.js.map": "/pokeapp/static/js/runtime-main.f09c9af4.js.map",
+    "static/js/2.62b92f62.chunk.js": "/pokeapp/static/js/2.62b92f62.chunk.js",
+    "static/js/2.62b92f62.chunk.js.map": "/pokeapp/static/js/2.62b92f62.chunk.js.map",
+    "static/js/3.c3aac9c9.chunk.js": "/pokeapp/static/js/3.c3aac9c9.chunk.js",
+    "static/js/3.c3aac9c9.chunk.js.map": "/pokeapp/static/js/3.c3aac9c9.chunk.js.map",
     "index.html": "/pokeapp/index.html",
     "static/css/main.8c8b27cf.chunk.css.map": "/pokeapp/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.cefc4de5.chunk.js.LICENSE.txt": "/pokeapp/static/js/2.cefc4de5.chunk.js.LICENSE.txt",
+    "static/js/2.62b92f62.chunk.js.LICENSE.txt": "/pokeapp/static/js/2.62b92f62.chunk.js.LICENSE.txt",
     "static/media/background.21ed6461.png": "/pokeapp/static/media/background.21ed6461.png",
-    "static/media/interrogacion.847d7aee.png": "/pokeapp/static/media/interrogacion.847d7aee.png"
+    "static/media/interrogacion.847d7aee.png": "/pokeapp/static/media/interrogacion.847d7aee.png",
+    "static/media/pokeball.2166f4bf.jpg": "/pokeapp/static/media/pokeball.2166f4bf.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2fb98883.js",
-    "static/js/2.cefc4de5.chunk.js",
+    "static/js/runtime-main.f09c9af4.js",
+    "static/js/2.62b92f62.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.d0bb9d3a.chunk.js"
+    "static/js/main.5d1dfadd.chunk.js"
   ]
 }
