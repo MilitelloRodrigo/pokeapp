@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Zafari from "./pages/Zafari";
 import Pokedex from "./pages/Pokedex";
+import AppBar from "./components/AppBar";
 
 function App() {
   return (

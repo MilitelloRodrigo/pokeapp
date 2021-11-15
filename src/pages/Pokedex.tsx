@@ -3,6 +3,7 @@ import {ReducerTypes} from "../utils/redux/Reducer";
 import {useDispatch, connect} from "react-redux";
 import {Pokemon} from "../utils/interfaces/pokemon";
 import PokedexItem from "../components/PokedexItem";
+import AppBar from "../components/AppBar";
 interface Props {
     viewedPokemon:Pokemon[],
 }
@@ -19,16 +20,28 @@ const Pokedex:React.FC<Props> = (props) => {
             if(pokemon){
                 list[i]=(<PokedexItem
                     pokemon={pokemon}
-                    key={pokemon.id}/>)
+                    key={pokemon.id}
+                id={i}/>)
             }else(
                 list[i]=(<PokedexItem
-                key={i}/>)
+                key={i}
+                id={i}/>)
             )
         }
         setLista(list)
     },[])
-    return <div>{lista}</div>
+    return <>
+            <AppBar/>
+            <div style={style}>{lista}</div>
+        </>
 
+}
+
+const style:React.CSSProperties= {
+    display:"flex",
+    flexWrap:"wrap",
+    justifyContent:"space-between",
+    flex:"row"
 }
 
 const mapStateToProps = (state: { viewedPokemon: any; }) => ({

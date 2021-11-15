@@ -7,8 +7,10 @@ import {ReducerTypes} from "../utils/redux/Reducer";
 import Nameplate from "../components/NamePlate";
 import WildPokemon from "../components/WildPokemon";
 import BattleGround from "../components/BattleGround";
-import BattleMenu from "./BattleMenu";
+import BattleMenu from "../components/BattleMenu";
+import AppBar from "../components/AppBar";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 interface Props {
 
 }
@@ -58,6 +60,7 @@ const Zafari:React.FC<Props> = (props) => {
     }
 
     return (<>
+            <AppBar/>
             <BattleGround/>
             {(pokemon)?(
                 <>
@@ -66,22 +69,40 @@ const Zafari:React.FC<Props> = (props) => {
                 </>
             ): null}
             <BattleMenu>
-                {message}
-                {(pokemon)?(
-                    <>
-                        <button onClick={onCachtHandler}>Atrapar</button>
-                        <button onClick={onRunHandler}>Correr</button>
-                    </>
-                ):
-                    <>
-                    <button onClick={onRunHandler}>Buscar</button>
-                    </>
+                <div style={FlexStyle}>
+                    <div>
+                        {message}
+                    </div>
+                    <div style={FlexColum}>
+                        {(pokemon)?(
+                            <>
+                                <Button style={ButtonStyle} variant="contained" onClick={onCachtHandler}>Atrapar</Button>
+                                <Button style={ButtonStyle} variant="contained" onClick={onRunHandler}>Correr</Button>
+                            </>
+                        ):
+                            <>
+                                <Button style={ButtonStyle} variant="contained" onClick={onRunHandler}>Buscar</Button>
+                            </>
 
-                }
-                <Link to="/pokedex"><button>Pokedex</button></Link>
+                        }
+                    </div>
+            </div>
             </BattleMenu>
         </>
     )
+}
+
+const FlexStyle:React.CSSProperties = {
+    display:"flex",
+    justifyContent:"space-between"
+}
+const FlexColum:React.CSSProperties = {
+    display:"flex",
+    flexDirection:"column",
+}
+
+const ButtonStyle: React.CSSProperties = {
+    margin:"2%"
 }
 
 export default Zafari

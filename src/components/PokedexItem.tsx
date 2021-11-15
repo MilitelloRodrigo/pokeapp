@@ -3,43 +3,65 @@ import {Pokemon} from "../utils/interfaces/pokemon";
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import CardMedia from '@mui/material/CardMedia';
 import interrogacion from '../assets/interrogacion.png';
+import pokeball from '../assets/pokeball.jpg'
 
 
 interface Props {
-pokemon?:Pokemon
+pokemon?:Pokemon,
+    id:number
 }
 
 const PokedexItem:React.FC<Props> = (props) => {
 
     return (
-        <Card >
-            <div>
-                <div >
-                    {(props.pokemon)?(
-                        <img style={imgStyle} src={props.pokemon.sprites.front_default} />
-                        ):(
-                            <img style={unkownStyle}  src={interrogacion}/>
-                        )}
-                </div>
-                <CardContent style={{ padding: "0 10px" }}>
-                    {(props.pokemon)?(
-                    <Typography align="center" gutterBottom variant="h6">
-                        {props.pokemon.name}
-                    </Typography>):null}
+            <Card style={cardStyle} sx={{ maxWidth: 345 }}>
+                {(props.pokemon)?
+                    (<CardMedia
+                        component="img"
+                        height="194"
+                        width="194"
+                        alt={props.pokemon.name}
+                        image={props.pokemon.sprites.front_default}
+                        style={(props.pokemon.catched)? Style : Gray}
+                    />):(
+                    <CardMedia
+                        component="img"
+                        width="194"
+                        height="194"
+                        image={interrogacion}
+                        />)
+                }
+                <CardContent>
+                    {(props.pokemon)?
+                        (<>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {props.pokemon.id }-{props.pokemon?.name}
+                            {(props.pokemon?.catched)?<>-  <img style={pokeballStyle} src={pokeball}/> </>: null}
+                            </Typography>
+                        </>):(
+                        <Typography gutterBottom variant="h5" component="div">
+                            {props.id}-Desconocido
+                        </Typography>)}
                 </CardContent>
-            </div>
-        </Card>
+            </Card>
     );
 }
+const cardStyle:React.CSSProperties = {
+    width: "18%",
+    padding: "1%"
+}
+const pokeballStyle:React.CSSProperties = {
+    width: "20px",
+    height:"20px",
+}
+const Gray:React.CSSProperties = {
+    filter:"grayscale(1)"
+}
+const Style:React.CSSProperties = {
 
-const imgStyle:React.CSSProperties = {
-    height:"96px",
-    width:"96px"
 }
 
-const unkownStyle:React.CSSProperties= {
-    height:"40px",
-    width:"40px"
-}
+
 export default React.memo(PokedexItem);
