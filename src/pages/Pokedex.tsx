@@ -13,12 +13,20 @@ const Pokedex:React.FC<Props> = (props) => {
     useEffect(()=>{
         console.log('estos son los pokimones')
         console.log(props.viewedPokemon)
-        let list = props.viewedPokemon.map((pokemon)=>{
-            return <PokedexItem pokemon={pokemon}/>
-        })
+        let list = Array(151)
+        for (var i = 1; i < 152; i++) {
+            let pokemon = props.viewedPokemon.find((pokemon)=>{return pokemon.id===i})
+            if(pokemon){
+                list[i]=(<PokedexItem
+                    pokemon={pokemon}
+                    key={pokemon.id}/>)
+            }else(
+                list[i]=(<PokedexItem
+                key={i}/>)
+            )
+        }
         setLista(list)
-        console.log(lista)
-    })
+    },[])
     return <div>{lista}</div>
 
 }
