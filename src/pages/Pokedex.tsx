@@ -40,7 +40,7 @@ const Pokedex:React.FC<Props> = (props) => {
 const style:React.CSSProperties= {
     display:"flex",
     flexWrap:"wrap",
-    justifyContent:"space-between",
+    justifyContent:"space-around",
     flex:"row"
 }
 

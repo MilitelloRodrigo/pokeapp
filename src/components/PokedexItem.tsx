@@ -20,16 +20,16 @@ const PokedexItem:React.FC<Props> = (props) => {
                 {(props.pokemon)?
                     (<CardMedia
                         component="img"
-                        height="194"
-                        width="194"
+                        height="194px"
+                        width="194px"
                         alt={props.pokemon.name}
                         image={props.pokemon.sprites.front_default}
                         style={(props.pokemon.catched)? Style : Gray}
                     />):(
                     <CardMedia
                         component="img"
-                        width="194"
-                        height="194"
+                        width="194px"
+                        height="194px"
                         image={interrogacion}
                         />)
                 }
@@ -50,6 +50,7 @@ const PokedexItem:React.FC<Props> = (props) => {
 }
 const cardStyle:React.CSSProperties = {
     width: "18%",
+    minWidth: "194px",
     padding: "1%"
 }
 const pokeballStyle:React.CSSProperties = {

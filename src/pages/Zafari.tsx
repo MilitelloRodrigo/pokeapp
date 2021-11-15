@@ -83,7 +83,6 @@ const Zafari:React.FC<Props> = (props) => {
                             <>
                                 <Button style={ButtonStyle} variant="contained" onClick={onRunHandler}>Buscar</Button>
                             </>
-
                         }
                     </div>
             </div>
