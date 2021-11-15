@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pokeapp/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/pokeapp/static/js/main.5d1dfadd.chunk.js",
-    "main.js.map": "/pokeapp/static/js/main.5d1dfadd.chunk.js.map",
+    "main.js": "/pokeapp/static/js/main.de13cf6c.chunk.js",
+    "main.js.map": "/pokeapp/static/js/main.de13cf6c.chunk.js.map",
     "runtime-main.js": "/pokeapp/static/js/runtime-main.f09c9af4.js",
     "runtime-main.js.map": "/pokeapp/static/js/runtime-main.f09c9af4.js.map",
     "static/js/2.62b92f62.chunk.js": "/pokeapp/static/js/2.62b92f62.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.f09c9af4.js",
     "static/js/2.62b92f62.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.5d1dfadd.chunk.js"
+    "static/js/main.de13cf6c.chunk.js"
   ]
 }
